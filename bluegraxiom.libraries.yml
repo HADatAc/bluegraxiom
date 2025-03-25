@@ -3,3 +3,5 @@ override:
   css:
     theme:
       css/override.css: {}
+  js:
+    js/override.js: {}

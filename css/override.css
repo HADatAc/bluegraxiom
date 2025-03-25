@@ -9,12 +9,28 @@ body {
   background: linear-gradient(to right, #055a8e 25%, #ffffff 100%)!important;
 }
 
-a.navbar-brand {
-  font-size: 35px!important;
-  margin-top: 20px!important;
+.navbar-brand {
+  font-size: 45px!important;
   color: #fff!important;
 }
 
 section.region-top-header-form a.nav-link {
   color: var(--bs-nav-link-color)!important;
+}
+
+section.region-top-header-form a.nav-link:hover {
+  color: var(--bs-navbar-hover-color)!important;
+}
+
+.navbar-brand .navbar-brand-text {
+  font-size: 45px!important;
+  color: #fff!important;
+}
+
+span.navbar-brand-text {
+  display: inline-block!important;
+  font-size: 45px!important;
+  color: #fff!important;
+  margin-top: 20px!important;
+  padding-left: 20px!important;
 }
