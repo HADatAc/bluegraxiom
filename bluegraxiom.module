@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains functionality for the Blue Graxiom module.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Attaches the 'override' library to all pages.
+ */
+function bluegraxiom_page_attachments(array &$attachments) {
+  // Attach the override library.
+  $attachments['#attached']['library'][] = 'bluegraxiom/override';
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ *
+ * Reorders the attached libraries so that the override library is loaded last,
+ * ensuring maximum CSS priority over theme styles.
+ */
+function bluegraxiom_page_attachments_alter(array &$attachments) {
+  if (!empty($attachments['#attached']['library'])) {
+    $libraries = &$attachments['#attached']['library'];
+    // Search for the 'bluegraxiom/override' library.
+    if (($key = array_search('bluegraxiom/override', $libraries)) !== FALSE) {
+      // Remove and append it to ensure it is the last loaded.
+      unset($libraries[$key]);
+      $libraries[] = 'bluegraxiom/override';
+    }
+  }
+}
