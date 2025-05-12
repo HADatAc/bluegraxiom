@@ -1,0 +1,6 @@
+name: Blue Graxiom
+type: module
+description: 'Module to override theme CSS using a custom file.'
+core_version_requirement: ^10
+package: Semantic Tools
+version: '0.9.1'

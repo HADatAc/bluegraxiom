@@ -1,0 +1,7 @@
+override:
+  version: 1.x
+  css:
+    theme:
+      css/override.css: {}
+  js:
+    js/override.js: {}
